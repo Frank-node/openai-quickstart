@@ -13,7 +13,7 @@ def translation(input_file, source_language, target_language):
 
     output_file_path = Translator.translate_pdf(
         input_file.name, source_language=source_language, target_language=target_language)
-
+    
     return output_file_path
 
 def launch_gradio():
@@ -32,7 +32,7 @@ def launch_gradio():
         allow_flagging="never"
     )
 
-    iface.launch(share=True, server_name="0.0.0.0")
+    iface.launch(share=False, server_name="0.0.0.0")
 
 def initialize_translator():
     # 解析命令行
